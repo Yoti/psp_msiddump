@@ -37,8 +37,12 @@ BUILD_PRX = 1
 PSPSDK=$(shell psp-config --pspsdk-path)
 include $(PSPSDK)/lib/build.mak
 
+all:
+	@mkdir -p PSP/GAME/CardDump/
+	@cp EBOOT.PBP PSP/GAME/CardDump/
+
 clean:
-	@rm -rf data.psp prefix eboot.prx eboot.elf ms_drv.o eboot.o PARAM.SFO EBOOT.PBP EBOOT.PBP
+	@rm -rf PSP data.psp prefix eboot.prx eboot.elf ms_drv.o eboot.o PARAM.SFO EBOOT.PBP EBOOT.PBP
 	@echo Cleaned
 
 

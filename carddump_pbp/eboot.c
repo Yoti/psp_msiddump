@@ -5,7 +5,7 @@
 #include <stdio.h> // sprintf()
 #include <string.h> // strlen()
 
-PSP_MODULE_INFO("carddump", 0, 3, 1);
+PSP_MODULE_INFO("carddump", 0, 3, 2);
 PSP_MAIN_THREAD_ATTR(0);
 PSP_HEAP_SIZE_KB(20480);
 
