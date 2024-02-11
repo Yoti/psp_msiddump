@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdarg.h>
 #include "ms_drv.h"
+#include "libpspexploit.h"
 
 /****************************************************************************
 ****************************************************************************/
@@ -485,7 +486,8 @@ u32 FindProc(const char* szMod, const char* szLib, u32 nid)
 	void *entTab;
 	int entLen;
 
-	pMod = sceKernelFindModuleByName(szMod);
+	//pMod = sceKernelFindModuleByName(szMod);
+	pMod = pspXploitFindModuleByName(szMod);
 
 	if (!pMod)
 	{
